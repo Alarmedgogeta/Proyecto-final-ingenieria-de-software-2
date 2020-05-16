@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<ListasDeReproduccion>
+  <ListaDeReproduccion Id="1">
+    <Nombre>Rolitas preciosas</Nombre>
+    <Usuario>1</Usuario>
+  </ListaDeReproduccion>
+  <ListaDeReproduccion Id="2">
+    <Nombre>Rolitas para manejar</Nombre>
+    <Usuario>2</Usuario>
+  </ListaDeReproduccion>
+  <ListaDeReproduccion Id="3">
+    <Nombre>Rolitas para ba&#xF1;arse</Nombre>
+    <Usuario>3</Usuario>
+  </ListaDeReproduccion>
+  <ListaDeReproduccion Id="4">
+    <Nombre>Rolitas para llorar</Nombre>
+    <Usuario>4</Usuario>
+  </ListaDeReproduccion>
+  <ListaDeReproduccion Id="5">
+    <Nombre>Rolitas para dedicar</Nombre>
+    <Usuario>5</Usuario>
+  </ListaDeReproduccion>
+</ListasDeReproduccion>
+
