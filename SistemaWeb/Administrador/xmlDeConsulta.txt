@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<CancionesDeListaDeReproduccion>
+  <CancionDeListaDeReproduccion Id="1">
+    <ListaDeReproduccion>1</ListaDeReproduccion>
+    <Cancion>1</Cancion>
+  </CancionDeListaDeReproduccion>
+  <CancionDeListaDeReproduccion Id="2">
+    <ListaDeReproduccion>2</ListaDeReproduccion>
+    <Cancion>2</Cancion>
+  </CancionDeListaDeReproduccion>
+  <CancionDeListaDeReproduccion Id="3">
+    <ListaDeReproduccion>3</ListaDeReproduccion>
+    <Cancion>3</Cancion>
+  </CancionDeListaDeReproduccion>
+  <CancionDeListaDeReproduccion Id="4">
+    <ListaDeReproduccion>4</ListaDeReproduccion>
+    <Cancion>4</Cancion>
+  </CancionDeListaDeReproduccion>
+  <CancionDeListaDeReproduccion Id="5">
+    <ListaDeReproduccion>5</ListaDeReproduccion>
+    <Cancion>5</Cancion>
+  </CancionDeListaDeReproduccion>
+</CancionesDeListaDeReproduccion>
+
