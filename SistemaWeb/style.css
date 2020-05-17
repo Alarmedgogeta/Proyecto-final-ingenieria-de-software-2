@@ -1,3 +1,49 @@
+.btn-modificar{
+  display: inline-block;
+  min-width: 7vw;
+  min-height: 7vh;
+  font-size: 12pt;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: rgb(16, 16, 212);
+  border: none;
+  border-radius: 15vw;
+  box-shadow: 0 9px #999;
+}
+.btn-modificar:hover{
+  background-color: rgb(11, 11, 126);
+}
+.btn-modificar:active{
+  background-color: rgb(11, 11, 126);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.btn-eliminar{
+  display: inline-block;
+  min-width: 7vw;
+  min-height: 7vh;
+  font-size: 12pt;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: rgb(175, 0, 0);
+  border: none;
+  border-radius: 15vw;
+  box-shadow: 0 9px #999;
+}
+.btn-eliminar:hover{
+  background-color: rgb(110, 8, 8);
+}
+.btn-eliminar:active{
+  background-color: rgb(110, 8, 8);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 .active {
   background-color: rgb(255, 82, 82);
   color: #ddd;

@@ -10,6 +10,7 @@ while($consulta = mysqli_fetch_field($resultados)){
     echo "<th>".$nombre."</th>";
 }
 echo "
+    <th> Acciones </th>
     </tr>";
 include("../Conexion/CerrarConexion.php");
 $conexion = new mysqli($host, $usuariodb, $clavedb, $basededatos);
@@ -22,7 +23,12 @@ while ($consulta = mysqli_fetch_array($resultados)) {
     for($i=0;$i<count($columnas);$i++){
         echo "<td>".$consulta[$columnas[$i]]."</td>";
     }
-    echo "</tr>";
+    echo "
+    <td>
+        <button name=\"modificar\" onclick=\"modificar(" . $consulta[$columnas[0]] . ")\" class=\"btn-modificar\">Modificar</button>
+        <button name=\"eliminar\" onclick=\"eliminar(" . $consulta[$columnas[0]] . ")\"  class=\"btn-eliminar\">Eliminar</button>
+    </td>
+    </tr>";
 }
 echo "</table>";
 include("../Conexion/CerrarConexion.php");

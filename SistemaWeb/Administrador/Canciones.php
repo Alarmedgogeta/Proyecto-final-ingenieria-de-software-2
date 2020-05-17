@@ -3,6 +3,9 @@
 
 <head>
     <title>Administrador</title>
+    <script type="text/javascript" src="../Scripts/jsPDF/jquery.min.js"></script>
+    <script src="../Scripts/jsPDF/dist/jspdf.min.js"></script>
+    <script src="../Scripts/jsPDF/jspdf.plugin.autotable.min.js"></script>
 </head>
 
 <body>
@@ -27,8 +30,27 @@
         ?>
         <form method="POST" action="Canciones.php">
             <input type="submit" value="Generar xml de tabla libros" name="btnGenerar">
+            <input type="submit" value="Generar PDF" id="generar">
         </form>
     </div>
+    <script>
+        $("#generar").click(function() {
+            var pdf = new jsPDF();
+            pdf.text(20, 20, "Mostrando la consulta en una Tabla con JsPDF y el Plugin AutoTable");
+            var columns = ["<?php for ($i = 0; $i < (count($columnas) - 1); $i++) { echo $columnas[$i]?>" ,"<?php } echo $columnas[(count($columnas)-1)]?>"];
+            var data = [
+                <?php foreach($filas as $f):?>
+                [ "<?php for($i = 0; $i<(count($columnas)-1); $i++) { echo $f[$i] ?>", "<?php } echo $f[(count($columnas)-1)] ?>" ],
+                <?php endforeach; ?>
+            ];
+            pdf.autoTable(columns, data, {
+                margin: {
+                    top: 25
+                }
+            });
+            pdf.save('miconsulta.pdf');
+        });
+    </script>
 </body>
 
 </html>
