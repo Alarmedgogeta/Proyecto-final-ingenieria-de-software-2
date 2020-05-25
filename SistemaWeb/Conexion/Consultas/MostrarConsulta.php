@@ -1,12 +1,15 @@
 <?php
 $columnas = array();
+$tiposDeDatos = array();
 $filas = array();
 echo "
 <table id=\"t01\">
     <tr>";
 while($consulta = mysqli_fetch_field($resultados)){
     $nombre = $consulta->name;
+    $tipo = $consulta->type;
     array_push($columnas,$nombre);
+    array_push($tiposDeDatos, $tipo);
     echo "<th>".$nombre."</th>";
 }
 echo "

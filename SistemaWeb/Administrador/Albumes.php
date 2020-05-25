@@ -6,6 +6,7 @@
     <script type="text/javascript" src="../Scripts/jsPDF/jquery.min.js"></script>
     <script src="../Scripts/jsPDF/dist/jspdf.min.js"></script>
     <script src="../Scripts/jsPDF/jspdf.plugin.autotable.min.js"></script>
+    <script src="Funcionalidad.js"></script>
 </head>
 
 <body>
@@ -21,25 +22,25 @@
     <div class="contenido">
         <?php
         $tabla_db1 = "Albumes";
+        $archivoActual = "Albumes.php";
         include("../Conexion/Consultas/ConsultarTabla.php");
         include("../Conexion/Consultas/MostrarConsulta.php");
+        include("AgregarFormularioRegistro.php");
         if (isset($_POST['btnGenerar'])) {
             $nombreSingular = "Album";
             include("../Conexion/Consultas/GenerarXML.php");
         }
-        if(isset($_POST['agregar'])){
-
-        }
-        if(isset($_POST['modificar'])){
-
+        if(isset($_POST['btnAgregar'])){
+            include("../Conexion/Insercciones/AgregarRegistro.php");
         }
         if(isset($_POST['eliminar'])){
-
+            include("../Conexion/Deletes/BorrarRegistro.php");
         }
         ?>
-        <form method="POST" action="Albumes.php">
+        <form method="POST" action="Albumes.php" id="formulario">
             <input type="submit" value="Generar xml" name="btnGenerar">
             <input type="submit" value="Generar PDF" id="generar">
+            <button name="btnAgregar" onclick="agregar()">Agregar registro</button>
         </form>
     </div>
     <script>
@@ -59,23 +60,6 @@
             });
             pdf.save('miconsulta.pdf');
         });
-        function modificar(id){
-            alert("Hola" + id);
-            <?php
-            
-            ?>
-        }
-        function eliminar(id){
-            alert("Hola " + id);
-            <?php
-
-            ?>
-            /* 
-            $id = 1;
-            include("../Conexion/Deletes/BorrarRegistro.php");
-            */
-            location.reload(true);
-        }
     </script>
 </body>
 

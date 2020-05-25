@@ -1,5 +1,4 @@
 <?php
-include("../Conexion/AbrirConexion.php");
-$resultados = mysqli_query($conexion, " DELETE FROM $tabla_db1 WHERE Id = $id");
-include("../Conexion/CerrarConexion.php");
+    $sql = "DELETE FROM $tabla_db1 WHERE Id = ".$idRegistro;
+    $conexion->query($sql);
 ?>

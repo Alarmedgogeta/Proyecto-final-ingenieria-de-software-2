@@ -202,8 +202,27 @@ input[type=submit] {
   float: left;
 }
 
+input[type=submit] #btnAgregar{
+  background-color: green;
+}
+
 input[type=submit]:hover {
   background-color: #770000;
+}
+
+button {
+  display: inline-block;
+  min-width: 7vw;
+  min-height: 7vh;
+  font-size: 12pt;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: green;
+  border: none;
+  box-shadow: 0 9px #999;
 }
 
 .container {

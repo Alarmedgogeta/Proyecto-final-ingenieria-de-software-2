@@ -6,6 +6,7 @@
     <script type="text/javascript" src="../Scripts/jsPDF/jquery.min.js"></script>
     <script src="../Scripts/jsPDF/dist/jspdf.min.js"></script>
     <script src="../Scripts/jsPDF/jspdf.plugin.autotable.min.js"></script>
+    <script src="Funcionalidad.js"></script>
 </head>
 
 <body>
@@ -21,16 +22,25 @@
     <div class="contenido">
         <?php
         $tabla_db1 = "CancionesDeListaDeReproduccion";
+        $archivoActual = "CancionesDeListaDeReproduccion.php";
         include("../Conexion/Consultas/ConsultarTabla.php");
         include("../Conexion/Consultas/MostrarConsulta.php");
+        include("AgregarFormularioRegistro.php");
         if (isset($_POST['btnGenerar'])) {
             $nombreSingular = "CancionDeListaDeReproduccion";
             include("../Conexion/Consultas/GenerarXML.php");
         }
+        if(isset($_POST['btnAgregar'])){
+            include("../Conexion/Insercciones/AgregarRegistro.php");
+        }
+        if(isset($_POST['eliminar'])){
+            include("../Conexion/Deletes/BorrarRegistro.php");
+        }
         ?>
-        <form method="POST" action="CancionesDeListaDeReproduccion.php">
+        <form method="POST" action="CancionesDeListaDeReproduccion.php" id="formulario">
             <input type="submit" value="Generar xml de tabla libros" name="btnGenerar">
             <input type="submit" value="Generar PDF" id="generar">
+            <button name="btnAgregar" onclick="agregar()">Agregar registro</button>
         </form>
     </div>
     <script>

@@ -6,6 +6,7 @@
     <script type="text/javascript" src="../Scripts/jsPDF/jquery.min.js"></script>
     <script src="../Scripts/jsPDF/dist/jspdf.min.js"></script>
     <script src="../Scripts/jsPDF/jspdf.plugin.autotable.min.js"></script>
+    <script src="Funcionalidad.js"></script>
 </head>
 
 <body>
@@ -21,16 +22,25 @@
     <div class="contenido">
         <?php
         $tabla_db1 = "CancionesEscuchadas";
+        $archivoActual = "CancionesEscuchadas.php";
         include("../Conexion/Consultas/ConsultarTabla.php");
         include("../Conexion/Consultas/MostrarConsulta.php");
+        include("AgregarFormularioRegistro.php");
         if (isset($_POST['btnGenerar'])) {
             $nombreSingular = "CancionEscuchada";
             include("../Conexion/Consultas/GenerarXML.php");
         }
+        if(isset($_POST['btnAgregar'])){
+            include("../Conexion/Insercciones/AgregarRegistro.php");
+        }
+        if(isset($_POST['eliminar'])){
+            include("../Conexion/Deletes/BorrarRegistro.php");
+        }
         ?>
-        <form method="POST" action="CancionesEscuchadas.php">
+        <form method="POST" action="CancionesEscuchadas.php" id="formulario">
             <input type="submit" value="Generar xml de tabla libros" name="btnGenerar">
             <input type="submit" value="Generar PDF" id="generar">
+            <button name="btnAgregar" onclick="agregar()">Agregar registro</button>
         </form>
     </div>
     <script>
@@ -50,6 +60,25 @@
             });
             pdf.save('miconsulta.pdf');
         });
+        function eliminar(id){
+            alert("Se va a eliminar registro " + id);
+            var datos = new FormData();
+            datos.append("id", id);
+            fetch('../Conexion/Deletes/BorrarRegistro.php', {
+                method: 'POST',
+                body: datos
+            })
+            .then( res => res.json)
+            .then( data => {
+                if(data === 0){
+                    alert("Registro eliminado");
+                }
+                else if(data === 1){
+                    alert("Imposible eliminar registro debido a que aparece en otra tabla");
+                }
+            })
+            //location.reload(true);
+        }
     </script>
 </body>
 
