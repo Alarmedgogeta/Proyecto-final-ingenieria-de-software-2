@@ -1,0 +1,261 @@
+.btn-modificar{
+  display: inline-block;
+  min-width: 7vw;
+  min-height: 7vh;
+  font-size: 12pt;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: rgb(16, 16, 212);
+  border: none;
+  border-radius: 15vw;
+  box-shadow: 0 9px #999;
+}
+.btn-modificar:hover{
+  background-color: rgb(11, 11, 126);
+}
+.btn-modificar:active{
+  background-color: rgb(11, 11, 126);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.btn-eliminar{
+  display: inline-block;
+  min-width: 7vw;
+  min-height: 7vh;
+  font-size: 12pt;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: rgb(175, 0, 0);
+  border: none;
+  border-radius: 15vw;
+  box-shadow: 0 9px #999;
+}
+.btn-eliminar:hover{
+  background-color: rgb(110, 8, 8);
+}
+.btn-eliminar:active{
+  background-color: rgb(110, 8, 8);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.active {
+  background-color: rgb(255, 82, 82);
+  color: #ddd;
+}
+
+.active2 {
+  background-color: rgb(59, 161, 0);
+  color: #ddd;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.inicio{
+  width: 100%;
+  border: red 5px solid;
+}
+
+.navbar2 {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar2 a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.navbar2 a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(48, 131, 1);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.contenido{
+  width: 100%;
+}
+
+table {
+  width:100%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+table#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+ background-color: #fff;
+}
+table#t01 th {
+  background-color: rgb(167, 1, 1);
+  color: white;
+}
+input#b01 {
+  width: 20%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 1vw;
+  background-color: white;
+  padding: 12px 20px 12px 20px;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+input[type=date], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  float: right;
+}
+
+input[type=submit] {
+  background-color: rgb(145, 0, 0);
+  color: white;
+  padding: 12px 20px;
+  margin-right: 5vw;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+}
+
+input[type=submit] #btnAgregar{
+  background-color: green;
+}
+
+input[type=submit]:hover {
+  background-color: #770000;
+}
+
+button {
+  display: inline-block;
+  min-width: 7vw;
+  min-height: 7vh;
+  font-size: 12pt;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: green;
+  border: none;
+  box-shadow: 0 9px #999;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+.btn-generar{
+  background-color: aqua;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
